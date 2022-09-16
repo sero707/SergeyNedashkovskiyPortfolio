@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
-body {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -68,21 +68,104 @@ body {
   margin-top: 19px;
 }
 
-.promo {
-  height: 800px;
-  background: url(../img/backg_promo.png) center center/cover no-repeat;
-  padding: 20px 0;
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 3;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s all;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.menu_active {
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+}
+.menu__block {
+  height: 100vh;
+  width: 15%;
+  margin: 0;
+  background-color: #34debf;
+  padding: 140px 0 0;
   position: relative;
 }
-.promo .hamburger {
+.menu__list {
+  display: block;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+}
+.menu__link {
+  margin-bottom: 20px;
+  padding-left: 75px;
+}
+.menu__link a {
+  font-weight: 700;
+  display: inline-block;
+  width: 100%;
+  font-size: 24px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s all;
+  position: relative;
+}
+.menu__link a::before {
+  content: "";
+  border: 1px solid black;
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.menu__link a:hover {
+  color: #eeaa2e;
+}
+.menu__link a:hover::before {
+  content: "";
+  border: 1px solid #eeaa2e;
+  background-color: #eeaa2e;
+}
+.menu__a {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.menu__a a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+.menu__a a img {
+  transform: rotate(90deg);
+}
+
+.hamburger {
   position: absolute;
   right: 32px;
   top: 26px;
   cursor: pointer;
   width: 36px;
   height: 26px;
+  z-index: 10;
 }
-.promo .hamburger span {
+.hamburger span {
   display: block;
   width: 36px;
   height: 3px;
@@ -92,7 +175,7 @@ body {
   transform: translateY(-50%);
   transition: 0.3s all;
 }
-.promo .hamburger span::before {
+.hamburger span::before {
   content: "";
   transition: 0.3s all;
   width: 30px;
@@ -102,7 +185,7 @@ body {
   top: -10px;
   right: 0;
 }
-.promo .hamburger span::after {
+.hamburger span::after {
   content: "";
   transition: 0.3s all;
   width: 30px;
@@ -112,20 +195,29 @@ body {
   top: 10px;
   right: 0;
 }
-.promo .hamburger_active span {
+.hamburger_active span {
   background-color: rgba(255, 255, 255, 0);
 }
-.promo .hamburger_active span::before {
+.hamburger_active span::before {
   content: "";
   top: 0;
   width: 35px;
   transform: rotate(-45deg);
+  background-color: #eeaa2e;
 }
-.promo .hamburger_active span::after {
+.hamburger_active span::after {
   content: "";
   width: 35px;
   transform: rotate(45deg);
   top: 0;
+  background-color: #eeaa2e;
+}
+
+.promo {
+  min-height: 800px;
+  background: url(../img/backg_promo.png) center center/cover no-repeat;
+  padding: 20px 0;
+  position: relative;
 }
 .promo__messanger {
   height: 425px;
@@ -160,7 +252,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7.5px 0;
+  padding: 20px 0;
   transition: 0.3s all;
 }
 .promo__a a:hover {
@@ -206,6 +298,7 @@ body {
 .promo__text h1 span {
   text-decoration: underline;
   color: #34debf;
+  margin-top: -10px;
 }
 
 .about-me {
@@ -218,13 +311,17 @@ body {
 .about-me__photo {
   max-width: 800px;
   max-height: 600px;
+  min-width: 300px;
+  min-height: 500px;
 }
 .about-me__photo img {
+  display: block;
   width: 100%;
 }
 .about-me__text {
-  max-width: 570px;
   position: relative;
+  max-width: 570px;
+  margin-left: 20px;
 }
 .about-me__text hr {
   display: inline-block;
@@ -248,8 +345,8 @@ body {
 }
 .about-me__grid {
   display: grid;
-  max-width: 570px;
-  grid-template: 1fr 1fr/1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
   margin-top: 40px;
   gap: 20px 50px;
 }
