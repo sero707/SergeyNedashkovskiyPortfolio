@@ -1,5 +1,5 @@
 .experience{
-    margin-top: 120px;
+    margin-top: 60px;
     .container{
         h2{
             @include title_text_h;
@@ -11,6 +11,7 @@
     &__block{
         display: flex;
         justify-content: space-between;
+        margin-top: 20px
     }
 
     &__title{

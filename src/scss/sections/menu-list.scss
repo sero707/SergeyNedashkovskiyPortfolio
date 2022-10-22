@@ -21,19 +21,24 @@
         width: 15%;
         margin: 0;
         background-color: $second-color;
-        padding: 140px 0 0;
+        padding: 0;
         position: relative;
-
+        display: flex;
+        align-items: center;
+        nav{
+            display: block;
+            width: 100%;
+            }
     }
     &__list{
         display: block;
+        width: 100%;
         margin: 0 auto;
         list-style-type: none;
         padding: 0;
     }
     &__link{
         margin-bottom: 20px;
-        padding-left: 75px;
         a{
             font-weight: 700;
             display: inline-block;
@@ -44,6 +49,9 @@
             text-decoration: none;
             transition: .3s all;
             position: relative;
+            span{
+                padding-left: 30%;
+            }
             &::before{
                 content: "";
                 border: 1px solid black;
@@ -52,7 +60,7 @@
                 border-radius: 100%;
                 position: absolute;
                 top: 50%;
-                left: -40px;
+                left: 10%;
                 transform: translateY(-50%);
                 z-index: 2;
             }
@@ -63,32 +71,6 @@
                     border: 1px solid $main-color;
                     background-color: $main-color;
                 }
-            }
-        }
-    }
-    &__a{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-        a{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 10px;
-            width: 40px;
-            height: 40px;
-            transition: 0.3s all;
-            &:hover{
-                width: 45px;
-                height: 45px;
-            }
-            img{
-                width: 100%;
             }
         }
     }

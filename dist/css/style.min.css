@@ -124,18 +124,24 @@
   width: 15%;
   margin: 0;
   background-color: #34debf;
-  padding: 140px 0 0;
+  padding: 0;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+.menu__block nav {
+  display: block;
+  width: 100%;
 }
 .menu__list {
   display: block;
+  width: 100%;
   margin: 0 auto;
   list-style-type: none;
   padding: 0;
 }
 .menu__link {
   margin-bottom: 20px;
-  padding-left: 75px;
 }
 .menu__link a {
   font-weight: 700;
@@ -148,6 +154,9 @@
   transition: 0.3s all;
   position: relative;
 }
+.menu__link a span {
+  padding-left: 30%;
+}
 .menu__link a::before {
   content: "";
   border: 1px solid black;
@@ -156,7 +165,7 @@
   border-radius: 100%;
   position: absolute;
   top: 50%;
-  left: -40px;
+  left: 10%;
   transform: translateY(-50%);
   z-index: 2;
 }
@@ -168,31 +177,66 @@
   border: 1px solid #eeaa2e;
   background-color: #eeaa2e;
 }
-.menu__a {
+
+.promo__messanger {
+  height: 500px;
   display: flex;
-  width: 100%;
-  justify-content: center;
+  color: #eeaa2e;
   align-items: center;
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  transform: translateY(-50%) rotate(180deg);
+  width: 20px;
+  position: fixed;
+  left: 50px;
+  top: 50%;
+  font-weight: 700;
+  font-size: 25px;
 }
-.menu__a a {
+.promo__messanger span {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #eeaa2e;
+  transform: rotate(-90deg);
+}
+.promo__a {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 170px;
+}
+.promo__a a {
+  width: 26px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 10px;
-  width: 40px;
-  height: 40px;
+  padding: 0;
   transition: 0.3s all;
 }
-.menu__a a:hover {
-  width: 45px;
-  height: 45px;
+.promo__a a div {
+  transform: rotate(90deg);
 }
-.menu__a a img {
+.promo__a a div svg {
+  stroke: #eeaa2e;
+  fill: #eeaa2e;
+  transition: 0.3s all;
+}
+.promo__a a div svg:hover {
+  stroke: #34debf;
+  fill: #34debf;
+}
+.promo__img {
+  transform: rotate(90deg);
+  display: block;
   width: 100%;
+}
+.promo__btn {
+  margin: 250px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hamburger {
@@ -208,7 +252,7 @@
   display: block;
   width: 36px;
   height: 3px;
-  background-color: #fff;
+  background-color: #eeaa2e;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -220,7 +264,7 @@
   width: 30px;
   height: 3px;
   position: absolute;
-  background-color: #fff;
+  background-color: #eeaa2e;
   top: -10px;
   right: 0;
 }
@@ -230,7 +274,7 @@
   width: 30px;
   height: 3px;
   position: absolute;
-  background-color: #fff;
+  background-color: #eeaa2e;
   top: 10px;
   right: 0;
 }
@@ -242,120 +286,28 @@
   top: 0;
   width: 35px;
   transform: rotate(-45deg);
-  background-color: #eeaa2e;
+  background-color: #34debf;
 }
 .hamburger_active span::after {
   content: "";
   width: 35px;
   transform: rotate(45deg);
   top: 0;
-  background-color: #eeaa2e;
+  background-color: #34debf;
 }
 
-.promo {
-  min-height: 800px;
-  background: url(../img/backg_promo.png) center center/cover no-repeat;
-  padding: 20px 0;
-  position: relative;
-}
-.promo__messanger {
-  height: 425px;
-  display: flex;
-  color: #fff;
-  align-items: center;
-  justify-content: space-between;
-  writing-mode: vertical-lr;
-  transform: translateY(-50%) rotate(180deg);
-  width: 20px;
-  position: absolute;
-  left: 48px;
-  top: 50%;
-  font-weight: 700;
-  font-size: 20px;
-}
-.promo__messanger span {
-  display: block;
-  width: 70px;
-  height: 2px;
-  background-color: #fff;
-  transform: rotate(-90deg);
-}
-.promo__a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.promo__a a {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
-  transition: 0.3s all;
-}
-.promo__a a:hover {
-  width: 25px;
-  height: 25px;
-}
-.promo__a a:nth-child(3) {
-  width: 25px;
-  height: 25px;
-  padding-bottom: 0;
-}
-.promo__a a:nth-child(3):hover {
-  width: 30px;
-  height: 30px;
-}
-.promo__img {
-  transform: rotate(90deg);
-  display: block;
-  width: 100%;
-}
-.promo__btn {
-  margin: 250px auto 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.promo__text h2 {
-  margin: 0;
-  font-size: 108px;
-  color: #fff;
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.promo__text h1 {
-  margin: 0;
-  font-size: 72px;
-  color: #fff;
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.promo__text h1 span {
-  text-decoration: underline;
-  color: #34debf;
-  margin-top: -10px;
-}
-
-.about-me {
-  padding-top: 50px;
-}
 .about-me__flex {
   display: flex;
-  justify-content: space-between;
+  padding-top: 60px;
+  justify-content: center;
 }
 .about-me__photo {
   max-width: 800px;
   max-height: 600px;
-  min-width: 300px;
-  min-height: 500px;
 }
 .about-me__photo img {
   display: block;
-  width: 100%;
+  width: 90%;
 }
 .about-me__text {
   position: relative;
@@ -374,7 +326,7 @@
   font-weight: 700;
   font-size: 36px;
   margin: 0;
-  margin-top: 49px;
+  margin-top: 0;
 }
 .about-me__text p {
   margin: 0;
@@ -414,7 +366,7 @@
 }
 
 .experience {
-  margin-top: 120px;
+  margin-top: 60px;
 }
 .experience .container h2 {
   font-weight: 700;
@@ -433,6 +385,7 @@
 .experience__block {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 .experience__title h3 {
   font-weight: 700;
@@ -487,7 +440,7 @@
 }
 
 .skill {
-  margin-top: 120px;
+  margin-top: 80px;
 }
 .skill .container h2 {
   font-weight: 700;
@@ -510,7 +463,7 @@
   grid-auto-rows: 1fr;
   justify-content: center;
   gap: 13px;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .skill__element {
   border: 1px solid #000;
@@ -538,7 +491,7 @@
 }
 
 .portfolio {
-  margin-top: 120px;
+  margin-top: 60px;
 }
 .portfolio .container h2 {
   font-weight: 700;

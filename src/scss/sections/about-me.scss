@@ -1,18 +1,76 @@
-.about-me{
-    padding-top: 50px;
+.hamburger{
+    position: absolute;
+    right: 32px;
+    top: 26px;
+    cursor: pointer;
+    width: 36px;
+    height: 26px;
+    z-index: 10;
+    span{
+        display: block;
+        width: 36px;
+        height: 3px;
+        background-color: $main-color;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.3s all;
+        &::before{
+            content: "";
+            transition: 0.3s all;
+            width: 30px;
+            height: 3px;
+            position: absolute;
+            background-color: $main-color;
+            top: -10px;
+            right: 0;
+        }
+        &::after{
+            content: "";
+            transition: 0.3s all;
+            width: 30px;
+            height: 3px;
+            position: absolute;
+            background-color: $main-color;
+            top: 10px;
+            right: 0;
+        }
+    }
+    &_active{    
+        span{
+            background-color: rgba($color: #fff, $alpha: 0.0);
+            &::before{
+                content: "";
+                top: 0;
+                width: 35px;
+                transform: rotate(-45deg);
+                background-color: $second-color;
+            }
+            &::after{
+                content: "";
+                width: 35px;
+                transform: rotate(45deg);
+                top: 0;
+                background-color: $second-color;
+            }
+        }
+    }
+}
+    .about-me{
     &__flex{
         display: flex;
-        justify-content: space-between;
+        padding-top: 60px;
+        justify-content: center;
     }
     &__photo{
         max-width: 800px;
         max-height: 600px;
-        min-width: 300px;
-        min-height: 500px;
+        // min-width: 300px;
+        // min-height: 500px;
 
         img{
             display: block;
-            width: 100%;
+            width: 90%;
         }
     }
     &__text{
@@ -31,7 +89,7 @@
             font-weight: 700;
             font-size: 36px;
             margin: 0;
-            margin-top: 49px;
+            margin-top: 0;
         }
         p{
             margin: 0;

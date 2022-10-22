@@ -1,113 +1,51 @@
-.hamburger{
-    position: absolute;
-    right: 32px;
-    top: 26px;
-    cursor: pointer;
-    width: 36px;
-    height: 26px;
-    z-index: 10;
-    span{
-        display: block;
-        width: 36px;
-        height: 3px;
-        background-color: #fff;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: 0.3s all;
-        &::before{
-            content: "";
-            transition: 0.3s all;
-            width: 30px;
-            height: 3px;
-            position: absolute;
-            background-color: #fff;
-            top: -10px;
-            right: 0;
-        }
-        &::after{
-            content: "";
-            transition: 0.3s all;
-            width: 30px;
-            height: 3px;
-            position: absolute;
-            background-color: #fff;
-            top: 10px;
-            right: 0;
-        }
-    }
-    &_active{    
-        span{
-            background-color: rgba($color: #fff, $alpha: 0.0);
-            &::before{
-                content: "";
-                top: 0;
-                width: 35px;
-                transform: rotate(-45deg);
-                background-color: $main-color;
-            }
-            &::after{
-                content: "";
-                width: 35px;
-                transform: rotate(45deg);
-                top: 0;
-                background-color: $main-color;
-            }
-        }
-    }
-}
-.promo{
-    min-height: 800px;
-    background: url(../img/backg_promo.png) center center/cover no-repeat;
-    padding: 20px 0;
-    position: relative;
-    
+.promo{  
     &__messanger{
-        height: 425px;
+        height: 500px;
         display: flex;
-        color: #fff;
+        color: $main-color;
         align-items: center;
         justify-content: space-between;
         writing-mode: vertical-lr;
-        transform: translateY(-50%) rotate(180deg),;
+        transform: translateY(-50%) rotate(180deg);
         width: 20px;
-        position: absolute;
-        left: 48px;
+        position: fixed;
+        left: 50px;
         top: 50%;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 25px;
         span{
             display: block;
-            width: 70px;
+            width: 60px;
             height: 2px;
-            background-color: #fff;
+            background-color: $main-color;
             transform: rotate(-90deg);
         }
     }
     &__a{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+        height: 170px;
+        
         a{
-            width: 20px;
-            height: 20px;
+            width: 26px;
+            height: 26px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px 0;
+            padding: 0;
             transition: 0.3s all;
-            &:hover{
-                width: 25px;
-                height: 25px;
-            }
-            &:nth-child(3){
-                width: 25px;
-                height: 25px;
-                padding-bottom: 0;
-                &:hover{
-                    width: 30px;
-                    height: 30px;
-                }
+            div{
+                transform: rotate(90deg);
+                svg{
+                    stroke:$main-color;
+                    fill: $main-color;
+                    transition: .3s all;
+                    &:hover{
+                        stroke: $second-color;
+                        fill: $second-color;
+                        }
+                    }
             }
         }
     }
@@ -121,28 +59,5 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    &__text{
-        h2{
-            margin: 0;
-            font-size: 108px;
-            color: #fff;
-            text-align: center;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        h1{
-            margin: 0;
-            font-size: 72px;
-            color: #fff;
-            text-align: center;
-            font-weight: 700;
-            text-transform: uppercase;
-            span{
-                text-decoration: underline;
-                color: $second-color;
-                margin-top: -10px;
-            }
-        }
     }
 }
