@@ -192,6 +192,7 @@
   top: 50%;
   font-weight: 700;
   font-size: 25px;
+  z-index: 2;
 }
 .promo__messanger span {
   display: block;
@@ -584,4 +585,8 @@
   left: -3px;
   transform: rotate(60deg);
   transition: 0.3s all;
+}
+
+.hidden {
+  display: none;
 }
