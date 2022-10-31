@@ -179,7 +179,7 @@
 }
 
 .promo__messanger {
-  height: 500px;
+  height: 450px;
   display: flex;
   color: #eeaa2e;
   align-items: center;
@@ -205,7 +205,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 170px;
+  height: 120px;
 }
 .promo__a a {
   width: 26px;
@@ -328,6 +328,9 @@
   font-size: 36px;
   margin: 0;
   margin-top: 0;
+}
+.about-me__text h4 {
+  font-size: 16px;
 }
 .about-me__text p {
   margin: 0;
