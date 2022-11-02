@@ -180,7 +180,7 @@
 }
 
 .promo__messanger {
-  height: 450px;
+  height: 46vh;
   display: flex;
   color: #eeaa2e;
   align-items: center;
@@ -192,12 +192,12 @@
   left: 50px;
   top: 50%;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 22px;
   z-index: 2;
 }
 .promo__messanger span {
   display: block;
-  width: 60px;
+  width: 45px;
   height: 2px;
   background-color: #eeaa2e;
   transform: rotate(-90deg);
@@ -206,7 +206,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 160px;
+  height: 130px;
 }
 .promo__a a {
   width: 26px;
@@ -304,12 +304,16 @@
   justify-content: center;
 }
 .about-me__photo {
-  max-width: 800px;
-  max-height: 600px;
+  max-width: 750px;
+  max-height: 550px;
+  min-width: 300px;
+  min-height: 500px;
 }
 .about-me__photo img {
   display: block;
-  width: 90%;
+  max-width: 750px;
+  max-height: 550px;
+  width: 100%;
 }
 .about-me__text {
   position: relative;
@@ -370,6 +374,12 @@
   line-height: 18px;
 }
 
+@media (max-width: 1300px) and (min-width: 1200px) {
+  .about-me__grid {
+    margin-top: 20px;
+    gap: 20px 30px;
+  }
+}
 .experience {
   margin-top: 60px;
 }
