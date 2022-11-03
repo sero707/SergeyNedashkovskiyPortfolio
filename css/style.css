@@ -48,8 +48,10 @@
 }
 
 .icon__circle {
-  width: 38px;
-  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  max-width: 38px;
+  max-height: 38px;
   background-color: #eeaa2e;
   border-radius: 100%;
   position: absolute;
@@ -523,6 +525,11 @@
   margin-top: 60px;
 }
 
+.experience__section-1,
+.experience__section-2 {
+  width: 50%;
+}
+
 .experience .container h2 {
   font-weight: 700;
   font-size: 36px;
@@ -852,6 +859,36 @@
   }
 }
 
+@media (max-width: 1050px) {
+  .experience__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .experience__section-1 {
+    width: 100%;
+  }
+
+  .experience__section-2 {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .experience__content {
+    margin-top: 35px;
+  }
+
+  .experience__title {
+    text-align: center;
+  }
+
+  .experience__title h3 {
+    padding-left: 0;
+  }
+}
+
 @media (max-width: 992px) {
   .about-me__photo-none {
     display: block;
@@ -927,9 +964,33 @@
   }
 }
 
+@media (max-width: 850px) {
+  .experience__section-2 {
+    margin-top: 45px;
+  }
+}
+
 @media (max-width: 650px) {
   .about-me__text h2 {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience__section-2 {
+    margin-top: 45px;
+  }
+
+  .icon__basic::after {
+    height: 240px;
+  }
+
+  .experience__content p::before {
+    min-height: 150%;
+  }
+
+  .experience__content p::before {
+    min-height: 130%;
   }
 }
 
