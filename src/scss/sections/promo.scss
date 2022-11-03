@@ -1,6 +1,6 @@
 .promo{  
     &__messanger{
-        height: 46vh;
+        height: 410px;
         display: flex;
         color: $main-color;
         align-items: center;
@@ -14,7 +14,7 @@
         font-weight: 700;
         font-size: 22px;
         z-index: 2;
-        span{
+        .hr{
             display: block;
             width: 45px;
             height: 2px;
@@ -38,6 +38,7 @@
             transition: 0.3s all;
             div{
                 transform: rotate(90deg);
+                border-radius: 100%; 
                 svg{
                     stroke:$main-color;
                     fill: $main-color;
@@ -60,5 +61,30 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+@media (max-width: 550px) {
+    .promo{
+        &__messanger{
+            position: absolute;
+            .hr, .sosial{display: none;}
+            writing-mode: horizontal-tb;
+            height: 50px;
+            top: 10px;
+            left: 10px;
+            transform: none;
+            width: 140px;
+        }
+        &__a{
+            height: 50px;
+            width: 100%;
+            a{
+                div{
+                    transform: none;
+                    border-radius: 100%;  
+                }    
+            }    
+        }
+        
     }
 }

@@ -60,6 +60,7 @@ flsFunction.isWebp();
         });
     });
     closeMenuList();
+        
   })();
 
 
