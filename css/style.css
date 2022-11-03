@@ -136,6 +136,10 @@
           transform: translateX(-50%);
 }
 
+.hidden {
+  overflow: hidden;
+}
+
 .menu {
   position: fixed;
   top: 0;
@@ -823,7 +827,7 @@
   transition: 0.3s all;
 }
 
-.hidden {
+.none {
   display: none;
 }
 
