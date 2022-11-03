@@ -1,5 +1,8 @@
 node_modules
 gulp
+dist
+src
+.gitattributes
 *.json
 gulpfile.js
 *.zip
