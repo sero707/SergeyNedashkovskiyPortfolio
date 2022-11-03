@@ -109,6 +109,9 @@ $second-color: #34debf;
 		transform: translateX(-50%);
 	}
 }
+	.hidden{
+			overflow: hidden;
+		}
 	@media (max-width: 1100px) {
 		.icon{
 			&__about{
