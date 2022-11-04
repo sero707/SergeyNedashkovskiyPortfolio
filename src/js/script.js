@@ -10,6 +10,14 @@ flsFunction.isWebp();
           targetMenu = document.querySelectorAll('.menu__target'),
           bodys = document.querySelector('.about-me');
 
+          const fadeIn = (el, timeout) => {
+            el.style.opacity = 0;
+            el.style.transition = `opacity ${timeout}ms`;
+            setTimeout(() => {
+              el.style.opacity = 1;
+            }, 10);
+          };
+
     hamburger.addEventListener('click', () => {
         menu.classList.toggle('menu_active');
         hamburger.classList.toggle('hamburger_active');
@@ -38,8 +46,9 @@ flsFunction.isWebp();
         });
     }
     document.addEventListener('scroll', function () {
-        if(document.scrollingElement.scrollTop + document.documentElement.clientHeight >= document.documentElement.scrollHeight - 1200){
+        if(document.scrollingElement.scrollTop > 1200){
             upArroy.classList.remove('none');
+            fadeIn(upArroy, 1200);
         } else {
             upArroy.classList.add('none');
         }
