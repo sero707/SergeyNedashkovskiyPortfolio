@@ -36,7 +36,8 @@
             right: 0;
         }
     }
-    &_active{    
+    &_active{   
+        position: fixed; 
         span{
             background-color: rgba($color: #fff, $alpha: 0.0);
             &::before{
