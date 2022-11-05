@@ -9,7 +9,7 @@
         transform: translateY(-50%) rotate(180deg);
         width: 20px;
         position: fixed;
-        left: 50px;
+        left: 30px;
         top: 50%;
         font-weight: 700;
         font-size: 22px;
@@ -84,7 +84,43 @@
                     border-radius: 100%;  
                 }    
             }    
+        }       
+    }
+}
+@media (max-height: 430px) {
+     .promo{
+        &__messanger{
+            .hr, .sosial{display: none;}
+            height: 150px;
+            left: 30px;
         }
+        &__a{
+            a{
+                div{
+                    transform: rotate(180deg);    
+                }    
+            }    
+        }    
+    }   
+}
+@media (max-width: 768px) {
+    .promo{
+        &__a{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 130px;
         
+        a{
+            div{
+                svg{
+                    &:hover{
+                        stroke: $main-color;
+                        fill: $main-color;
+                        }
+                    }
+            }
+        }
+    }  
     }
 }

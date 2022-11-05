@@ -196,7 +196,7 @@
   transform: translateY(-50%) rotate(180deg);
   width: 20px;
   position: fixed;
-  left: 50px;
+  left: 30px;
   top: 50%;
   font-weight: 700;
   font-size: 22px;
@@ -269,6 +269,30 @@
   .promo__a a div {
     transform: none;
     border-radius: 100%;
+  }
+}
+@media (max-height: 430px) {
+  .promo__messanger {
+    height: 150px;
+    left: 30px;
+  }
+  .promo__messanger .hr, .promo__messanger .sosial {
+    display: none;
+  }
+  .promo__a a div {
+    transform: rotate(180deg);
+  }
+}
+@media (max-width: 768px) {
+  .promo__a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 130px;
+  }
+  .promo__a a div svg:hover {
+    stroke: #eeaa2e;
+    fill: #eeaa2e;
   }
 }
 .hamburger {
@@ -749,11 +773,6 @@
   }
 }
 @media (max-width: 700px) {
-  .portfolio .container h2 {
-    font-size: 26px;
-  }
-}
-@media (max-width: 450px) {
   .portfolio .container h2 {
     font-size: 23px;
   }
