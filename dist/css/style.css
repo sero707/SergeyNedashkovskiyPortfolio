@@ -842,6 +842,9 @@
 }
 
 @media (max-width: 768px) {
+  .up {
+    right: 10px;
+  }
   .up:hover {
     border: 3px solid #eeaa2e;
   }
