@@ -70,15 +70,6 @@
   height: 2px;
   background-color: #000000;
 }
-.icon__basic::after {
-  content: "";
-  position: absolute;
-  top: -52px;
-  left: -36px;
-  width: 2px;
-  height: 72px;
-  background-color: #000000;
-}
 .icon__text {
   display: flex;
   font-weight: 700;
@@ -525,6 +516,20 @@
 }
 .experience__section-1, .experience__section-2 {
   width: 50%;
+  padding: 0 10px;
+}
+.experience__subtitle::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #eeaa2e;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -40px;
+  z-index: 2;
 }
 .experience .container h2 {
   font-weight: 700;
@@ -548,22 +553,11 @@
 .experience__title h3 {
   font-weight: 700;
   font-size: 20px;
-  padding-left: 43px;
-}
-.experience__title h3::before {
-  content: "";
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-color: #eeaa2e;
-  border-radius: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
+  text-align: center;
+  border-bottom: 2px solid #eeaa2e;
 }
 .experience__content {
-  margin-top: 45px;
+  margin-top: 15px;
   margin-left: 43px;
 }
 .experience__content p {
@@ -571,15 +565,6 @@
   font-size: 12px;
   line-height: 18px;
   margin-top: 12px;
-}
-.experience__content p::before {
-  content: "";
-  position: absolute;
-  top: -40px;
-  left: -36px;
-  width: 2px;
-  min-height: 180%;
-  background-color: black;
 }
 .experience__subtitle {
   display: flex;
@@ -628,15 +613,28 @@
     margin-top: 45px;
   }
   .icon__basic::after {
-    height: 240px;
+    height: 220px;
+  }
+  .experience__content p::before {
+    min-height: 130%;
+  }
+}
+@media (max-width: 768px) {
+  .experience__content p::before {
+    min-height: 160%;
+  }
+}
+@media (max-width: 450px) {
+  .icon__basic::after {
+    height: 185px;
+  }
+}
+@media (max-width: 400px) {
+  .icon__basic::after {
+    height: 165px;
   }
   .experience__content p::before {
     min-height: 150%;
-  }
-}
-@media (max-width: 600px) {
-  .experience__content p::before {
-    min-height: 130%;
   }
 }
 .skill {
@@ -692,6 +690,7 @@
 
 .portfolio {
   margin-top: 60px;
+  padding-bottom: 20px;
 }
 .portfolio .container h2 {
   font-weight: 700;
@@ -726,14 +725,8 @@
   grid-column: 2/4;
   grid-row: 2/3;
 }
-.portfolio__element {
-  background-color: aqua;
-}
 
 @media (max-width: 1620px) {
-  .portfolio__box {
-    grid-template-rows: repeat(2, 1fr);
-  }
   .portfolio__box .vertical {
     grid-column: 1;
     grid-row: 1;
@@ -781,8 +774,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s all;
   cursor: pointer;
+}
+.up .array {
+  height: 30px;
+  width: 2px;
+  background-color: #eeaa2e;
+}
+.up .array::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #eeaa2e;
+  position: absolute;
+  top: 8px;
+  left: -13px;
+  transform: rotate(-60deg);
+}
+.up .array::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #eeaa2e;
+  position: absolute;
+  top: 8px;
+  left: -3px;
+  transform: rotate(60deg);
 }
 .up:hover {
   border: 3px solid #34debf;
@@ -798,37 +817,24 @@
   content: "";
   background-color: #34debf;
 }
-.up .array {
-  height: 30px;
-  width: 2px;
-  background-color: #eeaa2e;
-  transition: 0.3s all;
-}
-.up .array::before {
-  content: "";
-  display: block;
-  width: 18px;
-  height: 2px;
-  background-color: #eeaa2e;
-  position: absolute;
-  top: 8px;
-  left: -13px;
-  transform: rotate(-60deg);
-  transition: 0.3s all;
-}
-.up .array::after {
-  content: "";
-  display: block;
-  width: 18px;
-  height: 2px;
-  background-color: #eeaa2e;
-  position: absolute;
-  top: 8px;
-  left: -3px;
-  transform: rotate(60deg);
-  transition: 0.3s all;
-}
 
 .none {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .up:hover {
+    border: 3px solid #eeaa2e;
+  }
+  .up:hover .array {
+    background-color: #eeaa2e;
+  }
+  .up:hover .array::after {
+    content: "";
+    background-color: #eeaa2e;
+  }
+  .up:hover .array::before {
+    content: "";
+    background-color: #eeaa2e;
+  }
 }

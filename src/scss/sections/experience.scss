@@ -2,7 +2,22 @@
     margin-top: 60px;
     &__section-1, &__section-2{
         width: 50%;
-
+        padding: 0 10px;
+    }
+    &__subtitle{
+        &::before{
+                content: "";
+                display: block;
+                width: 15px;
+                height: 15px;
+                background-color: $main-color;
+                border-radius: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -40px;
+                z-index: 2;
+            }    
     }
     .container{
         h2{
@@ -22,39 +37,28 @@
         h3{
             font-weight: 700;
             font-size: 20px;
-            padding-left: 43px;
-            &::before{
-                content: "";
-                display: block;
-                width: 15px;
-                height: 15px;
-                background-color: $main-color;
-                border-radius: 100%;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 0;
-            }
+            text-align: center;
+            border-bottom: 2px solid $main-color;
         }
     }
     &__content{
-        margin-top: 45px;
+        margin-top: 15px;
         margin-left: 43px;
         p{
             font-weight: 500;
             font-size: 12px;
             line-height: 18px;
             margin-top: 12px;
-            &::before{
-                content: "";
-                position: absolute;
-                top: -40px;
-                left: -36px;
-                width: 2px;
-                min-height: 180%;
-                background-color: black;
+            // &::before{
+            //     content: "";
+            //     position: absolute;
+            //     top: -40px;
+            //     left: -36px;
+            //     width: 2px;
+            //     min-height: 180%;
+            //     background-color: black;
 
-            }
+            // }
         }
     }
     &__subtitle{
@@ -110,14 +114,27 @@
         }
     }
     .icon__basic::after{
-        height: 240px;    
+        height: 220px;    
     }
-    .experience__content p::before{
-        min-height: 150%;    
-    }
-}
-@media (max-width: 600px) {
     .experience__content p::before{
         min-height: 130%;    
+    }
+}
+@media (max-width: 768px) {
+    .experience__content p::before{
+        min-height: 160%;    
+    }
+}
+    @media (max-width: 450px) {
+    .icon__basic::after{
+        height: 185px;    
+    }
+}
+        @media (max-width: 400px) {
+    .icon__basic::after{
+        height: 165px;    
+    }
+        .experience__content p::before{
+        min-height: 150%;    
     }
 }

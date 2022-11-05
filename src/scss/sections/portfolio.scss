@@ -1,5 +1,6 @@
 .portfolio{
     margin-top: 60px;
+    padding-bottom: 20px;
     .container{
         h2{
             @include title_text_h;
@@ -27,15 +28,12 @@
             grid-row: 2 / 3;
         }
     }
-    &__element{
-        background-color: aqua;
-    }
 }
 
     @media (max-width: 1620px) {
        .portfolio{
     &__box{
-        grid-template-rows: repeat(2, 1fr);
+        // grid-template-rows: repeat(2, minmax(180));
         .vertical{
             grid-column: 1;
             grid-row: 1;

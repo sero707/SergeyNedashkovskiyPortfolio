@@ -75,15 +75,6 @@ $second-color: #34debf;
 			height: 2px;
 			background-color: #000000;
 		}
-		&::after{
-			content: "";
-			position: absolute;
-			top: -52px;
-			left: -36px;
-			width: 2px;
-			height: 72px;
-			background-color: #000000;
-		}
 	}
 	&__text{
 		display: flex;
