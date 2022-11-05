@@ -1005,6 +1005,10 @@
     min-height: 160%;
   }
 
+  .up {
+    right: 10px;
+  }
+
   .up:hover {
     border: 3px solid #eeaa2e;
   }
